@@ -23,16 +23,4 @@ const TitleWrapper = styled.div`
   transform: translate(0, -50%);
   width: 100%;
 `;
-export const StartPage = () => (
-  <CursorContextProvider>
-    <Content>
-      <TitleWrapper>
-        <Title>
-          <NavLink to="/generator">цей сайт</NavLink> генерує інтернет пріколи
-        </Title>
-      </TitleWrapper>
-      <StartButton />
-      <Cursor />
-    </Content>
-  </CursorContextProvider>
-);
+export const GeneratingPage = () => <div></div>;
