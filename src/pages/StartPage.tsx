@@ -1,6 +1,12 @@
 import { StartButton } from "../components/buttons/StartButton";
+import { Cursor } from "../components/cursors/StartCursor";
+import CursorContextProvider from "../components/cursors/ContextProvider";
 import styled from "styled-components";
-const Content = styled.main``;
+const Content = styled.main`
+  cursor: none !important;
+  height: 100vh;
+  width: 100vw;
+`;
 const Title = styled.h1`
   font-family: "Press Start 2P";
   font-style: normal;
@@ -17,10 +23,13 @@ const TitleWrapper = styled.div`
   width: 100%;
 `;
 export const StartPage = () => (
-  <Content>
-    <TitleWrapper>
-      <Title>цей сайт генерує інтернет пріколи</Title>
-    </TitleWrapper>
-    <StartButton />
-  </Content>
+  <CursorContextProvider>
+    <Content>
+      <TitleWrapper>
+        <Title>цей сайт генерує інтернет пріколи</Title>
+      </TitleWrapper>
+      <StartButton />
+      <Cursor />
+    </Content>
+  </CursorContextProvider>
 );
